@@ -1,16 +1,23 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@binance-chain/bsc-connector': ^1.0.0
+  '@ethersproject/address': ^5.7.0
+  '@ethersproject/bytes': ^5.7.0
   '@next/font': 13.2.3
+  '@types/lodash': ^4.14.191
   '@types/node': 18.14.4
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
+  '@wagmi/core': ^0.9.7
   antd: ^5.2.3
   axios: ^1.3.4
   eslint: 8.35.0
   eslint-config-next: 13.2.3
   ethers: ^5
+  lodash: ^4.17.21
   next: 13.2.3
+  next-seo: ^5.15.0
   react: 18.2.0
   react-dom: 18.2.0
   react-hot-toast: ^2.4.0
@@ -21,16 +28,23 @@ specifiers:
   zustand: ^4.3.5
 
 dependencies:
+  '@binance-chain/bsc-connector': 1.0.0
+  '@ethersproject/address': 5.7.0
+  '@ethersproject/bytes': 5.7.0
   '@next/font': 13.2.3
+  '@types/lodash': 4.14.191
   '@types/node': 18.14.4
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
+  '@wagmi/core': 0.9.7_46ojjlp2ga5z6y3v72tih44ejy
   antd: 5.2.3_biqbaboplfbrettd7655fr4n2y
   axios: 1.3.4
   eslint: 8.35.0
   eslint-config-next: 13.2.3_ycpbpc6yetojsgtrx3mwntkhsu
   ethers: 5.7.2
+  lodash: 4.17.21
   next: 13.2.3_biqbaboplfbrettd7655fr4n2y
+  next-seo: 5.15.0_nvzgbose6yf6w7ijjprgspqefi
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hot-toast: 2.4.0_biqbaboplfbrettd7655fr4n2y
@@ -190,6 +204,14 @@ packages:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
+    dev: false
+
+  /@binance-chain/bsc-connector/1.0.0:
+    resolution: {integrity: sha512-Id/P/Zs8Cgg+fJv3XN3BVWZB3Pj+VA00flhpkB6K+vUzjMihS+sZFrMYDnjiRfrJgi0ppEMqRsMlOli9+qwxaA==}
+    dependencies:
+      '@web3-react/abstract-connector': 6.0.7
+      '@web3-react/types': 6.0.7
+      tiny-warning: 1.0.3
     dev: false
 
   /@coinbase/wallet-sdk/3.6.4:
@@ -1231,6 +1253,10 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
 
+  /@types/lodash/4.14.191:
+    resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
+    dev: false
+
   /@types/node/12.20.55:
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
     dev: false
@@ -1837,7 +1863,7 @@ packages:
   /@walletconnect/window-metadata/1.0.0:
     resolution: {integrity: sha512-9eFvmJxIKCC3YWOL97SgRkKhlyGXkrHwamfechmqszbypFspaSk+t2jQXAEU7YClHF6Qjw5eYOmy1//zFi9/GA==}
     dependencies:
-      '@walletconnect/window-getters': 1.0.0
+      '@walletconnect/window-getters': 1.0.1
     dev: false
 
   /@walletconnect/window-metadata/1.0.1:
@@ -1845,6 +1871,16 @@ packages:
     dependencies:
       '@walletconnect/window-getters': 1.0.1
       tslib: 1.14.1
+    dev: false
+
+  /@web3-react/abstract-connector/6.0.7:
+    resolution: {integrity: sha512-RhQasA4Ox8CxUC0OENc1AJJm8UTybu/oOCM61Zjg6y0iF7Z0sqv1Ai1VdhC33hrQpA8qSBgoXN9PaP8jKmtdqg==}
+    dependencies:
+      '@web3-react/types': 6.0.7
+    dev: false
+
+  /@web3-react/types/6.0.7:
+    resolution: {integrity: sha512-ofGmfDhxmNT1/P/MgVa8IKSkCStFiyvXe+U5tyZurKdrtTDFU+wJ/LxClPDtFerWpczNFPUSrKcuhfPX1sI6+A==}
     dev: false
 
   /@web3modal/core/2.1.2_react@18.2.0:
@@ -4279,6 +4315,18 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: false
 
+  /next-seo/5.15.0_nvzgbose6yf6w7ijjprgspqefi:
+    resolution: {integrity: sha512-LGbcY91yDKGMb7YI+28n3g+RuChUkt6pXNpa8FkfKkEmNiJkeRDEXTnnjVtwT9FmMhG6NH8qwHTelGrlYm9rgg==}
+    peerDependencies:
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      next: 13.2.3_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /next/13.2.3_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-nKFJC6upCPN7DWRx4+0S/1PIOT7vNlCT157w9AzbXEgKy6zkiPKEt5YyRUsRZkmpEqBVrGgOqNfwecTociyg+w==}
     engines: {node: '>=14.6.0'}
@@ -5847,6 +5895,10 @@ packages:
     dependencies:
       globalyzer: 0.1.0
       globrex: 0.1.2
+    dev: false
+
+  /tiny-warning/1.0.3:
+    resolution: {integrity: sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==}
     dev: false
 
   /to-fast-properties/2.0.0:
