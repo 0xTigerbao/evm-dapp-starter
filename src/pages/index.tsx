@@ -1,5 +1,7 @@
-import {Button} from "antd";
+import ButtonConnect from "@/components/wallets/ButtonConnect";
+import {useWeb3Active} from "@/hooks/useWeb3Active";
 
 export default function Home() {
-    return <Button>Hello</Button>
+    const {provider} = useWeb3Active()
+    return <ButtonConnect/>
 }

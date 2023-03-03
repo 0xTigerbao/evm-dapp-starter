@@ -1,6 +1,6 @@
 import {configureChains, createClient, mainnet} from "wagmi";
 import {jsonRpcProvider} from 'wagmi/providers/jsonRpc'
-import {bsc, bscTestnet, polygonMumbai} from "wagmi/chains";
+import {arbitrum, bsc, bscTestnet, polygonMumbai} from "wagmi/chains";
 import {InjectedConnector} from "wagmi/connectors/injected";
 import {CoinbaseWalletConnector} from "wagmi/connectors/coinbaseWallet";
 import {WalletConnectConnector} from "wagmi/connectors/walletConnect";
@@ -9,7 +9,7 @@ import {LedgerConnector} from "wagmi/connectors/ledger";
 import {SafeConnector} from "wagmi/connectors/safe";
 import {APP_NAME} from "@/configs/index";
 
-export const CHAINS = [bsc, mainnet, bscTestnet, polygonMumbai]
+export const CHAINS = [bsc, mainnet, bscTestnet, polygonMumbai, arbitrum]
 
 export const {provider, chains} = configureChains(CHAINS, [
     jsonRpcProvider({
@@ -62,7 +62,7 @@ const ledgerConnector = new LedgerConnector({
 })
 
 export const wagmiClient = createClient({
-    autoConnect: false,
+    autoConnect: true,
     provider,
     connectors: [
         new SafeConnector({chains}),

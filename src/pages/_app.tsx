@@ -7,8 +7,10 @@ import Head from 'next/head';
 import {DefaultSeo} from 'next-seo';
 import {SEO} from "@/configs/SEO";
 import Script from 'next/script';
-import {WagmiConfig} from "wagmi";
+import Web3Provider from "@/providers/Web3Provider";
 import {wagmiClient} from "@/configs/wagmi";
+import React from "react";
+import {WagmiConfig} from 'wagmi';
 
 const queryClient = new QueryClient()
 export default function App({Component, pageProps}: AppProps) {
@@ -42,7 +44,9 @@ export default function App({Component, pageProps}: AppProps) {
             <AntdProvider>
                 <QueryClientProvider client={queryClient}>
                     <WagmiConfig client={wagmiClient}>
-                        <Component {...pageProps} />
+                        <Web3Provider>
+                            <Component {...pageProps} />
+                        </Web3Provider>
                     </WagmiConfig>
                 </QueryClientProvider>
             </AntdProvider>
